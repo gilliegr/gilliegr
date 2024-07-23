@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Personal Blog</title>
     <link rel="stylesheet" href="styles.css">
-    <script defer src="rss-feed.js"></script> <!-- Include the RSS feed JavaScript -->
 </head>
 <body>
     <header>
@@ -17,6 +16,7 @@
                 <li><a href="#blog">Blog</a></li>
                 <li><a href="#about-me">About Me</a></li>
                 <li><a href="#contact">Contact</a></li>
+                <li><a href="#gallery">Gallery</a></li>
             </ul>
         </nav>
     </header>
@@ -29,184 +29,25 @@
 
         <section id="current-projects">
             <h2>Current Projects</h2>
-            <!-- Parameter	               Units	Defined/Measured
-Resting Potential (Vrest)	mV	The stable membrane potential after breaking the seal, with no current applied
-Input Resistance (Rin)  	mΩ	Calculated from voltage responses to small negative current injections (typically 5-20 pA, XXX ms, from resting potential). Rin was then determined from Ohms law
-Membrane time constant (τm)	ms	Calculated from voltage responses to small negative current injections (typically 5-20 pA, XXX ms, from resting potential). For τm, the voltage resposnes were fitted with a single expontial to the initial 100 ms of the response, omitting the first 1 ms. Determined from the monoexponential curve fitting the falling phase fo hte response to a small hyperpolarizing current step (XX-XX pa from resting poential)
-Input Capacitance (Cin) 	pF	Cin was calculated as  τm/Rin.	
-Rheobase                	pA	The minimal current need to elicit an AP, determined from -70mV (not corrected)
-Threshold	                mV	The membrane potential atwhich the rate of rise exceeded 10 mV/ms for a single AP elicited with rheobase current
-AP Amplitude	                mV	The difference between threshold and voltage at the peak of the AP
-Spike Width	                ms	Measured at half height between threshold and peak action potential
-Afterhyperpolarization (AHP)	mV	Difference between threshold and the most negative membrane potential after the spike, measured on the response to the smallest current step evoking an AP
-AP Rate of Rise (ΔV/Δt) 	mV/ms	Maximal voltage slope (dmV/dms) during action potential upswing
-AP Rate of Fall (ΔV/Δt)	        mV/ms	Maximal voltage slope (dmV/dms) during action potential downswing	
-Adaptation Ratio (AR)	        -	The ratio of Fmax, steady state to Fmax, initial. Steady state defined as the last 5 APs. The current injection used for the measurement of adaptation and firing rate was the lowest current injection able to induce firing for the entire duration of the 1 s step (50-100 pA steps)
-Frequency-current (F-I slope)	Hz/pA	Frequency– current slope, the slope of the regression line fitted to the initial, steeper portion of the F–I plot. Frequency was defined as the reciprocal of the first interspike interval (ISI)
-First ISI(Fmax initial)	        Hz	The reciprocal of the first ISI, measured at the first current step applied to evoke sustained spiking (1 sec)
-Change in AHP	                mV	Used IV, sweep that evoked 50 Hz first interval, then the amp of the first AHP and then compared to the last AHP (see beirlein 2003)
-</Intrinsic Property Parameters>
-
-
-<Intrinsic Properties Analysis Method>
-Electrophysiological Data Analysis. 
-Intrinsic properties. Resting membrane potentials (RMP, in mV) were measured within 1 min of break-in,
-with no current applied. Only cells with stable membrane potentials were included. Input resistances (Rin, in MΩ)
-were determined using Ohms Law by measuring the voltage response, from rest, in response to small negative current
-injections (5 - 20 pA; 500 ms duration; 7-99 sweeps; ~1.5 mV mean response). Membrane time constants (m, in ms)
-were measured from the average voltage response (see input resistance above) by fitting a single exponential to the
-initial falling phase of the response (100 ms; omitting the first 1 ms). For a few cells with particularly short time
-constants, a shorter window was used to obtain a better fit. Input capacitance (Cin, in pF) was calculated as m / Rin.
-Rheobase currents (in pA) were defined as the minimal positive current injection needed to evoke an AP from a
-holding potential of -84 mV (1000 ms pulse duration; 5 pA steps). AP latencies (in ms) were determined by measuring
-the time from the start of the rheobase current pulse to the peak of the first AP.AP thresholds (in mV) were determined
-from the first AP evoked by the rheobase current and defined by the membrane potential at which the dV/dt of the AP
-exceeded 10 mV/ms. AP amplitudes (in mV) were determined for the first AP evoked by the rheobase current and
-measured as the difference between the threshold and the peak of the AP. AP half-widths (in ms) were determined for
-the first AP evoked by the rheobase current and measured at the half height between threshold and the peak of the AP.
-The max rate of rise (in mV/ms) was defined as the maximal dV/dt during the upswing of the first AP evoked by the
-rheobase current. The max rate of decay (in mV/ms) was defined as the maximal negative dV/dt during the downswing
-of the first AP evoked by the rheobase current. Afterhyperpolarizations (AHPs: in mV) were measured as the
-difference between the threshold and the peak of the AHP. Spike frequency adaptation was determined by calculating
-the adaptation ratio, defined as the firing frequency at the second or last interspike interval divided by the firing
-frequency at the first interspike interval. For CT and CC cells, analysis was performed on a 1 s depolarizing current
-step that generated sustained firing in which the initial firing rate was near 50 Hz. For interneurons, analysis was
-performed on the smallest current step that generated sustained firing. The change in amplitude of AHPs (in mV) was
-defined as the amplitude differences between the first and last AHP elicited by a 1 s depolarizing current step. Analysis
-was performed on sweeps in which the firing frequency at the beginning of the train (first interspike interval) was near
-50 Hz. Peak sag amplitudes (in mV) were measured in response to a 1 s negative current step (-200 pA for CT and
-CC cells; -100 pA for interneurons) and calculated relative to the steady-state voltage at the end of the step (average
-of last 200 ms). Analysis of electrophysiological data was performed using Molecular Devices Clampfit 10, AxoGraph
-X, and Microsoft Excel.
-</Intrinsic Properties Analysis Method>
-
-<Intrinsic Property Terms and Units with Example Values>
-Term					Unit		       Example Value
- RMP 					(mV)			-78.9
- Rm 					(MΩ) 			65.9
- τm 					(ms) 			5.7
- Cm 					(pF) 			90.8 
- Rheobase 				(pA) 			560.6
- Spike Delay 				(ms) 			105.6
- Spike threshold			(mV)			-50.0
- Spike amplitude 			(mV) 			69.1
- Spike half-width 			(mV) 			0.15
- AHP amplitude 				(mV)			-22.7
- Max rate of rise 			(mV*ms) 		704.6
- Max rate of decay 			(mV*ms)			-614.8
- RMP - threshold 			(mV) 			28.8
- Voltage sag amplitude 			(mV)			-1.0
- Spike frequency adaptation ratio 	(Last/1st)		0.65
-</Intrinsic Property Terms and Units with Example Values>
-
-
-<Data_Collection_Hardware>
-Molecular Devices 700b Analog Amplifier
-Molecular Devices DigiData 1550b digitizer
-</Data_Collection_Hardware>
-
-<Data_Collection_Software>
-Molecular Devices Axon pClamp11.1 / Clampex11.1
-Molecular Devices 700b commander
-</Data_Collection_Software>
-
-<Data Collection ABF File Properties General Case>
-Protocol: [File Path] #Example: C:\Users\Crandall Lab\Documents\Molecular Devices\pCLAMP\Params\Wac protocols_011622_KEB\Channel B\2. Rheobase B.pro
-Data File: [File Name] #Example:2023_01_28_0004_Rheo
-File format: ABF V2.09
-Created: [Date] #Example: Jan 28, 2023, at 00:20:32.211 [10:41:07]
-Created by: Clampex 11.1
-Acquisition mode: episodic stimulation.
-Axon binary file (integer)
-[n] sampels in this file. #Example: 2000000 samples in this file.
-Comment: n/a
-
-Experiment type: other.
-File GUID:       {C19857A0-4165-4708-8979-B80E7559B368}.
-
-Input signal: Ch1p Vmem.    MultiClamp 700 telegraph parameters:
-    Additional gain: x1.00.
-    Lowpass filter frequency: 10000.00 Hz.
-    Membrane capacitance: 0.00 pF.
-Input signal: Ch1s Imem.    MultiClamp 700 telegraph parameters:
-    Additional gain: x1.00.
-    Lowpass filter frequency: 10000.00 Hz.
-    Membrane capacitance: 0.00 pF.
-Input signal: Ch2p Vmem.    MultiClamp 700 telegraph parameters:
-    Additional gain: x1.00.
-    Lowpass filter frequency: 10000.00 Hz.
-    Membrane capacitance: 0.00 pF.
-Input signal: Ch2s Imem.    MultiClamp 700 telegraph parameters:
-    Additional gain: x1.00.
-    Lowpass filter frequency: 10000.00 Hz.
-    Membrane capacitance: 0.00 pF.
-Trial length: [n] run; [n] sweeps of [n] ms ([n] samples per channel). #Example: 1 run; 5 sweeps of 5000.0 ms (100000 samples per channel).
-Minimum time between run starts.
-[n] s between sweep starts. #Example: 10.000 s between sweep starts.
-Sampling rate:  20.00 kHz (interval 50.00 µs).
-
-Input signal: [Input signals]    MultiClamp 700 telegraph parameters:
-    Additional gain: x1.00.
-    Lowpass filter frequency: 10000.00 Hz.
-    Membrane capacitance: 0.00 pF.
-Input signal: [Input signals]    MultiClamp 700 telegraph parameters:
-    Additional gain: x1.00.
-    Lowpass filter frequency: 10000.00 Hz.
-    Membrane capacitance: 0.00 pF.
-Input signal: [Input signals]    MultiClamp 700 telegraph parameters:
-    Additional gain: x1.00.
-    Lowpass filter frequency: 10000.00 Hz.
-    Membrane capacitance: 0.00 pF.
-Input signal: [Input signals]    MultiClamp 700 telegraph parameters:
-    Additional gain: x1.00.
-    Lowpass filter frequency: 10000.00 Hz.
-    Membrane capacitance: 0.00 pF.
-
-Input signal: [Input signals]    Telegraphs disabled.
-Trial length: 1 run; [n] sweeps of [n] ms (100000 samples per channel).
-Minimum time between run starts.
-[n] s between sweep starts.
-Sampling rate:  20.00 kHz (interval 50.00 µs).
-
-
-Input signals: Ch1p Vmem, Ch1s Imem, Ch2p Vmem, Ch2s Imem
-and LED 1 Out.
-
-Signal Ch1 Icmd 	holding level: 0.00 pA.
-Signal Ch2 Icmd 	holding level: 0.00 pA.
-Signal Cmd 2 		holding level: 0.00 mV.
-Signal LED 1 Cmd 	holding level: 0.00 %.
-Signal LED 2 Cmd 	holding level: 0.00 %.
-Signal OUT 5 		holding level: 0.00 V.
-Signal OUT 6 		holding level: 0.00 V.
-Signal OUT 7 		holding level: 0.00 V.
-</Data Collection ABF File Properties General Case>
-
-<CSV Format for Data Points>
-
-									Intrinsic Membrane Properties (Rest)								Characterization of SOM Cells									Spike Frequency Adaptation									Single AP Properties (Rheobase from -70 mV)																Location in L6			
-																										 Frequency (Hz)																												
-Cell #	Cell Name	Age	Strain	tdTOM	Expression	Cell Type	Injection	mouse	Rm (mV)	Rin (MΩ)	M.Tau (ms)	Cin (pF)	ΔmV	ΔI (pA)	Sw (#)		IV File (#)	Sweep (#)	First Freq (Hz)	First AHP (mV)	Last AHP (mV)	∆  AHP (mV)	Peak Sag (mV)			IV File	First 	Second	Third	Last (1sec)	2nd/1st	3rd/1st	Last/1st		Test	File	Membrane Potential (mV)	Series	Rheo (pA)	Thresh (mV)	AP Time (ms)	AP Delay	Peak (mV)	1/2 Width (ms)	AHP (mV)	M. Rise (mV*ms)	M. Decay (mV*ms)	Rm-Thresh			L6 Thickness	Dist from top of L6	Norm Dist	
- -->
+            <p>Here is detailed information about my current projects. The content can be long and informative, showcasing the progress and goals of each project.</p>
+            <!-- Add more detailed content about your current projects here -->
         </section>
 
         <section id="past-projects">
             <h2>Past Projects</h2>
-            <!-- Add content about your past projects here -->
+            <p>Here is detailed information about my past projects. This section highlights previous work and accomplishments.</p>
+            <!-- Add more detailed content about your past projects here -->
         </section>
 
         <section id="blog">
             <h2>Blog</h2>
+            <p>Welcome to my blog where I share updates, insights, and interesting reads.</p>
             <!-- Add blog posts here -->
-        </section>
-
-        <section id="research-feed">
-            <h2>Recent Neuroscience Research</h2>
-            <ul id="feed-list"></ul> <!-- List for RSS feed items -->
         </section>
 
         <section id="about-me">
             <h2>About Me</h2>
+            <p>Learn more about me, my background, and my research interests.</p>
             <!-- Add information about yourself here -->
         </section>
 
@@ -222,10 +63,36 @@ Cell #	Cell Name	Age	Strain	tdTOM	Expression	Cell Type	Injection	mouse	Rm (mV)	R
                 <button type="submit">Send</button>
             </form>
         </section>
+
+        <section id="gallery">
+            <h2>Gallery</h2>
+            <div class="gallery-grid">
+                <img src="image1.jpg" alt="Description 1">
+                <img src="image2.jpg" alt="Description 2">
+                <!-- Add more images here -->
+            </div>
+        </section>
     </main>
 
     <footer>
         <p>&copy; 2024 My Personal Blog. All rights reserved.</p>
     </footer>
+
+    <button id="back-to-top" onclick="scrollToTop()">Back to Top</button>
+    <script src="rss-feed.js"></script>
+    <script>
+        window.onscroll = function() {
+            var button = document.getElementById("back-to-top");
+            if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+                button.style.display = "block";
+            } else {
+                button.style.display = "none";
+            }
+        };
+
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    </script>
 </body>
 </html>
