@@ -1,81 +1,124 @@
-body {
-    font-family: Arial, sans-serif;
-    background-color: #121212;
-    color: #e0e0e0;
+/* styles.css */
+
+/* Basic Reset */
+body, h1, h2, p, ul, li {
     margin: 0;
     padding: 0;
+}
+
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #121212; /* Dark background for cyberpunk theme */
+    color: #e0e0e0; /* Light text color */
 }
 
 header {
-    background-color: #1e1e1e;
+    background: #1a1a1a;
     padding: 1rem;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    left: 0;
-    box-shadow: 0 4px 2px -2px gray;
+    color: #e0e0e0;
 }
 
 nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
     display: flex;
     justify-content: center;
+    list-style: none;
 }
 
 nav ul li {
-    margin: 0 15px;
+    margin: 0 1rem;
 }
 
 nav ul li a {
-    color: #1e90ff;
+    color: #e0e0e0;
     text-decoration: none;
-    font-weight: bold;
+}
+
+nav ul li a:hover {
+    color: #ff4081; /* Accent color for hover effect */
 }
 
 main {
-    padding: 4rem 2rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two-column layout */
+    gap: 1rem;
+    padding: 1rem;
 }
 
 section {
+    background: #1e1e1e;
+    padding: 1rem;
+    border-radius: 8px;
     margin-bottom: 2rem;
 }
 
-form {
-    display: flex;
-    flex-direction: column;
+footer {
+    background: #1a1a1a;
+    padding: 1rem;
+    text-align: center;
+    color: #e0e0e0;
 }
 
 form label {
-    margin-top: 1rem;
+    display: block;
+    margin-top: 0.5rem;
 }
 
 form input, form textarea {
+    width: 100%;
     padding: 0.5rem;
-    border: 1px solid #444;
-    background-color: #1e1e1e;
-    color: #e0e0e0;
-    border-radius: 4px;
+    margin-top: 0.25rem;
 }
 
 form button {
-    margin-top: 1rem;
-    padding: 0.5rem;
+    background: #e0e0e0;
+    color: #121212;
     border: none;
-    background-color: #1e90ff;
-    color: #fff;
-    border-radius: 4px;
+    padding: 0.5rem 1rem;
     cursor: pointer;
+    margin-top: 1rem;
 }
 
 form button:hover {
-    background-color: #1c86ee;
+    background: #b0b0b0;
 }
 
-footer {
-    background-color: #1e1e1e;
-    color: #aaa;
-    padding: 1rem;
-    text-align: center;
+/* Gallery Styles */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 1rem;
+}
+
+.gallery-grid img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Back to Top Button */
+#back-to-top {
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+    background: #ff4081; /* Accent color */
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 50%;
+    cursor: pointer;
+    display: none; /* Hidden by default */
+}
+
+#back-to-top:hover {
+    background: #e040fb;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    main {
+        grid-template-columns: 1fr; /* Single column on small screens */
+    }
 }
